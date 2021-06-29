@@ -125,7 +125,7 @@ class SemiCircleToFullUpView(ctx : Context) : View(ctx) {
         private var prev : SCTFUNode? = null
 
         init {
-
+            addNeighbor()
         }
 
         fun addNeighbor() {
@@ -203,6 +203,15 @@ class SemiCircleToFullUpView(ctx : Context) : View(ctx) {
             sctfu.startUpdating {
                 animator.start()
             }
+        }
+    }
+
+    companion object {
+
+        fun create(activity : Activity) : SemiCircleToFullUpView {
+            val view : SemiCircleToFullUpView = SemiCircleToFullUpView(activity)
+            activity.setContentView(view)
+            return view
         }
     }
 }
