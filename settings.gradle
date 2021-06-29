@@ -1,0 +1,3 @@
+include ':semicircletofullview'
+include ':app'
+rootProject.name = "LinkedSemiCircleToFullUpView"
